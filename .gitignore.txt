@@ -1,0 +1,50 @@
+# Ignorar archivos binarios y de compilación
+*.o
+*.obj
+*.exe
+*.dll
+*.so
+*.dylib
+*.class
+
+# Ignorar archivos de registro
+*.log
+
+# Ignorar archivos de configuración del sistema
+.DS_Store
+Thumbs.db
+
+# Ignorar archivos temporales
+*.tmp
+*.swp
+*.swo
+
+# Ignorar dependencias comunes de Node.js
+node_modules/
+npm-debug.log
+
+# Ignorar dependencias comunes de Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Ignorar dependencias de Java y otros IDEs
+*.jar
+*.war
+*.ear
+.idea/
+*.iml
+*.class
+
+# Ignorar dependencias y configuraciones de Visual Studio Code
+.vscode/
+
+# Ignorar dependencias de Java y Maven
+target/
+*.class
+
+# Ignorar carpetas de dependencias de Go
+vendor/
+
+# Mantener el directorio .include
+.include/
