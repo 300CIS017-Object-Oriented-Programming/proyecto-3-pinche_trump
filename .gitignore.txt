@@ -47,4 +47,5 @@ target/
 vendor/
 
 # Mantener el directorio .include
-.include/
+!.include/
+.idea
