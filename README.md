@@ -21,5 +21,6 @@ concierne al ambito educativo
 
 ## 3. Estructura del Proyecto
 ### 3.1 Directorios y Archivos
-- **inputs/**: Carpeta que contiene los archivos **xlsx** para el análisis
+- **docs/inputs/**: Carpeta que contiene los archivos **xlsx** para el análisis
+- **Model/**: Carpeta que contiene los archivos base del programa
 
