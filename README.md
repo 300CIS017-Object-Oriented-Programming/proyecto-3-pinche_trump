@@ -26,11 +26,11 @@ concierne al ambito educativo
 ## 3.2. Configuración del Entorno 
 
 1. Clonar el repositorio
----
+
 ![Clonamos el Repositorio](./assets/clone.png)
 
 2. Instalar las dependencias
----
+
 ![Clonamos el Repositorio](./assets/dependencias.png)
 ## 4. Carga de Información 
 
