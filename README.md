@@ -23,4 +23,19 @@ concierne al ambito educativo
 ### 3.1 Directorios y Archivos
 - **docs/inputs/**: Carpeta que contiene los archivos **xlsx** para el análisis
 - **Model/**: Carpeta que contiene los archivos base del programa
+## 3.2. Configuración del Entorno 
 
+1. Clonar el repositorio
+---
+
+2. Instalar las dependencias
+--
+## 4. Carga de Información 
+
+### 4.1 Descripción 
+
+### 4.2 Código de Carga de Arhivos
+
+## 5. Filtrado de Información 
+
+### 5.1 Busqueda por palabras claves
