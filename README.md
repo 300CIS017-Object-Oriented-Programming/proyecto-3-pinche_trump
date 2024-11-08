@@ -27,9 +27,11 @@ concierne al ambito educativo
 
 1. Clonar el repositorio
 ---
+![Clonamos el Repositorio](./assets/clone.png)
 
 2. Instalar las dependencias
---
+---
+![Clonamos el Repositorio](./assets/dependencias.png)
 ## 4. Carga de Información 
 
 ### 4.1 Descripción 
@@ -39,3 +41,24 @@ concierne al ambito educativo
 ## 5. Filtrado de Información 
 
 ### 5.1 Busqueda por palabras claves
+### 5.2 Código de filtrado
+
+## 6 Procesamiento de Datos
+### 6.1 Descripción 
+El sistema procesará los datos para calcular, por cada programa y año:
+
+- **Estudiantes inscritos**
+- **Estudiantes graduados**
+- **Estudiantes matriculados**
+- **Estudiantes admitidos**
+- **Estudiantes matriculados por primera vez**
+
+### 6.2 Código de Procesamiento
+
+## Conlusión 
+Este manual técnico proporciona una guía detallada para el desarrollo e implementación de una aplicación web interactiva
+utilizando Streamlit para el análisis de datos del SNIES. Se describen los pasos necesarios para la carga, filtrado y
+procesamiento de la información, lo que permite asegurar que el sistema sea fácil de usar y altamente funcional
+
+
+
