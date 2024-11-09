@@ -38,10 +38,17 @@ concierne al ambito educativo
 
 ### 4.2 Código de Carga de Arhivos
 
+***INSERTE CÓDIGO AQUÍ***
+
 ## 5. Filtrado de Información 
 
 ### 5.1 Busqueda por palabras claves
+
+Los usuarios podrán ingresar palabras clave para identificar programas académicos relevantes
+
 ### 5.2 Código de filtrado
+
+***INSERTE CÓDIGO AQUÍ***
 
 ## 6 Procesamiento de Datos
 ### 6.1 Descripción 
@@ -54,6 +61,8 @@ El sistema procesará los datos para calcular, por cada programa y año:
 - **Estudiantes matriculados por primera vez**
 
 ### 6.2 Código de Procesamiento
+
+***INSERTE CÓDIGO AQUÍ***
 
 ## Conlusión 
 Este manual técnico proporciona una guía detallada para el desarrollo e implementación de una aplicación web interactiva
