@@ -31,7 +31,7 @@ concierne al ambito educativo
 
 2. Instalar las dependencias
 
-![Clonamos el Repositorio](./assets/dependencias.png)
+![Instalamos las dependencias necesarias](./assets/dependencias.png)
 ## 4. Carga de Información 
 
 ### 4.1 Descripción 
