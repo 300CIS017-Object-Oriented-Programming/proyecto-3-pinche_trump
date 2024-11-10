@@ -29,7 +29,7 @@ concierne al ambito educativo
 - **docs/inputs/**: Carpeta que contiene los archivos **xlsx** para el análisis
 - **Model/**: Carpeta que contiene los archivos base del programa
 
-## 3.2. Configuración del Entorno 
+## 3.2. Configuración del Entorno
 
 1. Clonar el repositorio
 ![Clonamos el Repositorio](./assets/clone.png)
