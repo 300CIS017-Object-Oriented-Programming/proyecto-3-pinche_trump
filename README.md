@@ -71,6 +71,10 @@ El sistema procesará los datos para calcular, por cada programa y año:
 
 ***INSERTE CÓDIGO AQUÍ***
 
+### 7 Estructura Básica inicial pensada para el apartado gráfico
+
+![estructura Inicial Pensada](./assets/estrucutura_basica.png)
+
 ## Conlusión
 
 Este manual técnico proporciona una guía detallada para el desarrollo e implementación de una aplicación web interactiva
