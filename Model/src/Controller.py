@@ -1,5 +1,3 @@
-from tkinter.font import names
-
 
 class Controller:
 
