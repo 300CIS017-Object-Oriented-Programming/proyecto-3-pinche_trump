@@ -1,4 +1,5 @@
 import streamlit as st
+
 def htmlCode():
     html_code = """
     <!DOCTYPE html> 
@@ -137,5 +138,20 @@ def chargeBar():
             time.sleep(0.01)
         my_bar.progress(percentComplete + 1)
         st.write('Datos cargados correctamente')
+
+def saveComents(comentarios, persona, coment):
+    comentarios.append({"persona": persona, "comentario": coment})
+
+def coments(comentarios):
+    st.markdown("<p style='font-size: 30px;'>Ayudanos a Mejorar!!!<br>Dejanos conocer tu opinión</p>", unsafe_allow_html=True)
+    comentario = st.text_input("Escribe tus comentarios")
+    persona = st.text_input('Escribe tu Nombre por favor')
+    comentarioButton = st.button('Enviar Comentarios')
+    if comentario and persona and comentarioButton:
+        st.write('Tus comentarios han sido enviados con éxito')
+        saveComents(comentarios, persona, comentario)
+    elif comentarioButton:
+        st.write('No has escrito ningún comentario')
+
 
 
