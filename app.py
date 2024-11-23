@@ -8,6 +8,7 @@ def iniciarPrograma():
         st.session_state.controlador = Controller()
 
     st.set_page_config(page_title="Inicio", page_icon="😎", layout="wide", initial_sidebar_state="collapsed")
+    horizontal_bar = "<hr style='margin-top: 0; margin-bottom: 0; height: 30px; border: 40px solid #635985;'><br>"  # thin divider line
 
     html_code = """
     <!DOCTYPE html> 
@@ -24,22 +25,19 @@ def iniciarPrograma():
                 padding: 40px; 
                 background-color: #5153AC; 
                 color: white;
-                } 
-                .banner { 
+                } .banner{ 
                 display: flex; 
                 justify-content: flex-start; 
                 background-color: #5153AC; 
                 color: white;
                 padding: 10px; 
                 align-items: flex-start;
-                } 
-                .banner img { 
+                } .banner img{ 
                     max-width: 55%; 
                     height: auto; 
                 } .container {
                      position: relative; 
                      max-width: 100%; 
-                     overflow: hidden;
                 }.zoom {
                     transition: transform 0.5s ease;
                 } .container:hover .zoom {
@@ -85,7 +83,7 @@ def iniciarPrograma():
             <h1>Consultas de interés</h1> 
         </div> 
         <div class="banner"> 
-            <img src="https://thumbs.dreamstime.com/z/estudiantes-con-docente-estudiando-en-aula-de-diferentes-edades-sentados-juntos-mesas-estudio-grupal-profesor-270894481.jpg" alt="Estudiantes en un aula" class="zoom"><p> 
+            <img src="https://thumbs.dreamstime.com/z/estudiantes-con-docente-estudiando-en-aula-de-diferentes-edades-sentados-juntos-mesas-estudio-grupal-profesor-270894481.jpg" alt="Estudiantes en un aula" class="zoom"</img><p> 
             <div class="banner"> 
                 <div>
                     <p style="font-size: 25px;">Conozca las instituciones y programas académicos de educación superior autorizados por el Ministerio de Educación Nacional</p>
@@ -107,11 +105,9 @@ def iniciarPrograma():
                     <img src="https://static.misionesonline.news/wp-content/uploads/2020/11/Clases-universitarias-AP-def.jpg" class="zoom"</img>
                 </div>
             </div> 
-            <div class="right"> 
-                <button>Instituciones</button>
-                <button>Información personalizada</button>
-                <button>Información Estadística</button> 
-                <button>Estadísticas Destacadas</button> 
+            <div class="container"> 
+                 <img src="https://www.pngarts.com/files/7/Education-Course-Download-Transparent-PNG-Image.png" width="800" height="700"  class="zoom"</img>
+                 <img src=""
             </div>
         </div> 
     </body> 
@@ -156,7 +152,15 @@ def iniciarPrograma():
         with tab3:
            st.header("ESTADÍSTICAS RELEVANTES")
            st.write("Aquí va el contenido de la Pestaña 3")
-
+    st.markdown(horizontal_bar, unsafe_allow_html=True)
+    container = st.container()
+    col1, col2, col3 = container.columns(3)
+    with col1:
+        st.title('holii')
+    with col2:
+        st.text('holi')
+    with col3:
+        soplamonda = st.text_input('soplamonda')
 
 if __name__ == "__main__":
     iniciarPrograma()
