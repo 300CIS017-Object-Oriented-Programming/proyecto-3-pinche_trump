@@ -1,4 +1,5 @@
 import streamlit as st
+import os
 
 def htmlCode():
     html_code = """
@@ -71,7 +72,7 @@ def htmlCode():
     </head> 
     <body> 
         <div class="header"> 
-            <h1>BIENVENIDOS AL SNIES</h1> 
+            <h1>Sistema Nacional de Información de la Educación Superior (SNIES)</h1> 
         </div> 
         <div class="banner"> 
             <img src="https://thumbs.dreamstime.com/z/estudiantes-con-docente-estudiando-en-aula-de-diferentes-edades-sentados-juntos-mesas-estudio-grupal-profesor-270894481.jpg" alt="Estudiantes en un aula" class="zoom"</img><p> 
@@ -98,7 +99,6 @@ def htmlCode():
             </div> 
             <div class="container"> 
                  <img src="https://www.pngarts.com/files/7/Education-Course-Download-Transparent-PNG-Image.png" width="800" height="700"  class="zoom"</img>
-                 <img src=""
             </div>
         </div> 
     </body> 
@@ -152,6 +152,10 @@ def coments(comentarios):
         saveComents(comentarios, persona, comentario)
     elif comentarioButton:
         st.write('No has escrito ningún comentario')
+
+
+
+
 
 
 
