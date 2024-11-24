@@ -1,6 +1,7 @@
 import streamlit as st
 import Model.analisisDatos.menus_secundarios_informacion as msi
 import Model.analisisDatos.menu_descargas as md
+import Model.analisisDatos.menu_ver_informacion as mvi
 from Model.analisisDatos.analisis_utility import *
 
 def primer_menu():
@@ -53,6 +54,8 @@ def app():
         msi.menu_seleccion_filtro()
     elif st.session_state["menu"] == "descargar":
         md.menu_descargas()
+    elif st.session_state["menu"] == "Ver Informacion":
+        mvi.menu_ver_informacion()
     else:
         st.write('opcion de menu no reconocida')
 
