@@ -48,7 +48,7 @@ def iniciar_programa():
             st.write('Github de las personas implicadas en el desarrollo:')
             link_git = [{"integrante": "Jorge", "gitHub": "https://github.com/jorluos"},
                        {"integrante": "Alejandro", "gitHub": "https://github.com/Alejost7"},
-                       {"integrante": "Mateo", "gitHub": "https://github.com/Mateo"}]
+                       {"integrante": "Mateo", "gitHub": "https://github.com/samuelbonillaf"}]
 
             for integrante in link_git:
                 st.write(integrante["integrante"], ":")
