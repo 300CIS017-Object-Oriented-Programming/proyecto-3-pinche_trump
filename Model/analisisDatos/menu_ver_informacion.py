@@ -8,7 +8,8 @@ def boton_volver_categoria():
 
 def menu_ver_informacion():
     boton_volver_categoria()
-    lectura = gl(st.session_state["dataframe"])
-    a_mostrar = lectura.obtener_filas_filtro(st.session_state["filtro_columna"], st.session_state["fila_filtro"])
-    st.title("Tabla Interactiva")
-    AgGrid(a_mostrar, height=800)
+    if "dataframe" in st.session_state and not st.session_state["dataframe"].empty:
+        lectura = gl(st.session_state["dataframe"])
+        a_mostrar = lectura.obtener_filas_filtro(st.session_state["filtro_columna"], st.session_state["fila_filtro"])
+        st.title("Tabla Interactiva")
+        AgGrid(a_mostrar, height=800)
