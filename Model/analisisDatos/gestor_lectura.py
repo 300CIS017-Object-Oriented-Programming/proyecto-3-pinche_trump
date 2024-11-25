@@ -14,7 +14,7 @@ class gestor_lectura:
         if not index.empty:
             return index[0]
         else:
-            return None    
+            return None
 
     def obtener_encabezados(self, index):
         header = self.archivo.iloc[index]

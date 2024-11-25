@@ -9,8 +9,8 @@ def menu_descargas():
     st.markdown("### Aquí puedes descargar el archivo con la información filtrada del Sistema Nacional de Información de la Educación Superior (SNIES).")
     try:
         lector = gl(st.session_state["dataframe"])
-        a_descargar = lector.obtener_filas_filtro(st.session_state["filtro_columna"], st.session_state["fila_filtro"])
-        descarga = ge(a_descargar)
+        filtrado = lector.obtener_filas_filtro(st.session_state["filtro_columna"], st.session_state["fila_filtro"])
+        descarga = ge(filtrado)
         tipo_descarga = st.selectbox(
             "Selecciona el tipo de archivo que deseas para tu descarga",
             options= ["Excel", "Json", "CSV"]
