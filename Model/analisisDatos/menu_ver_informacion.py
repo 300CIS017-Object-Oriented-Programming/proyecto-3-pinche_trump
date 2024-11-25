@@ -2,6 +2,7 @@ import streamlit as st
 from st_aggrid import AgGrid
 from Model.analisisDatos.gestor_lectura import gestor_lectura as gl
 
+
 def boton_volver_categoria():
     if st.button("Volver", key="volver"):
         st.session_state["menu"] = st.session_state["categoria"]
