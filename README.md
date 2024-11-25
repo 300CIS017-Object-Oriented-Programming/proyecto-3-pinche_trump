@@ -75,20 +75,20 @@ classDiagram
         +obtener_columna(filtro_columna)
     }
 
-    class gestor_metricas {
-        -archivo
-        +__init__(archivo)
-        +obtener_metricas(filtro)
-        +consolidado()
-        +agrupamiento(columna1, columna2)
-    }
-
     class gestor_escritura {
         -archivo
         +__init__(archivo)
         +guardar_excel(nombre_archivo)
         +guardar_json(nombre_archivo)
         +guardar_csv(nombre_archivo)
+    }
+
+    class gestor_metricas {
+        -archivo
+        +__init__(archivo)
+        +obtener_metricas(filtro)
+        +consolidado()
+        +agrupamiento(columna1, columna2)
     }
 
     class Utility {
@@ -117,11 +117,6 @@ classDiagram
         +opciones_filtros(lector, filtro)
     }
 
-    class menu_ver_informacion {
-        +boton_volver_categoria()
-        +menu_ver_informacion()
-    }
-
     class menu_filtros {
         +opcion_caja_seleccion(filtro)
         +opcion_entrada_texto()
@@ -133,13 +128,26 @@ classDiagram
         +generar_grafico_barras(archivo, categoria, columna)
     }
 
+
+    class menu_ver_informacion {
+        +boton_volver_categoria()
+        +menu_ver_informacion()
+    }
+
     class menu_descargas {
         +menu_descargas()
         +boton_volver_categoria()
         +boton_descargar(opcion, escritor)
     }
 Utility --> App
-
+gestor_escritura --> menu_descargas
+gestor_lectura --> menu_descargas
+gestor_lectura --> menu_ver_informacion
+gestor_lectura --> menu_estadisticas
+gestor_lectura --> menus_secundarios_informacion
+gestor_metricas --> menu_estadisticas
+menu_filtros --> menus_secundarios_informacion
+analisis_utility --> analisis_de_datos_page
 ```
 
 
