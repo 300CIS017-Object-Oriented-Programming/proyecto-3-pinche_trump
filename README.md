@@ -1,6 +1,6 @@
 # Manual Técnico: Sistema de Análisis de Datos del SNIES
 
-# LINK DE LA APP https://proyecto-3-pinchetrump-uvteneml9guwk9nbyprjr6.streamlit.app/
+### NUESTRA APP DESPLEGADA https://proyecto-3-pinchetrump-uvteneml9guwk9nbyprjr6.streamlit.app/
 
 ## 1. Descripción General
 
