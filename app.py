@@ -1,101 +1,65 @@
 import streamlit as st
-from Model.src.Controller import Controller
+from Model.utility.Utility import html_code, html_code2, html_code3, coments
 
-def iniciarPrograma():
-    if 'controlador' not in st.session_state:
-        st.session_state.controlador = Controller()
 
-    st.set_page_config(page_title="Inicio", page_icon="🛎😎", layout="wide")
-    html_code = """
-    <!DOCTYPE html> 
-    <html lang="es"> 
-    <head> 
-        <meta charset="UTF-8"> 
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-        <title>SNIES</title> 
-        <style> 
-            body { 
-                font-family: Arial, sans-serif; 
-                } .header { 
-                text-align: center; 
-                padding: 20px; 
-                background-color: #5153AC; 
-                color: white;
-                } 
-                .banner { 
-                display: flex; 
-                flex-direction: column-wrap;
-                justify-content: center; 
-                align-items: flex-start; 
-                background-color: #5153AC; 
-                color: white;
-                padding: 20px; 
-                } 
-                .banner img { 
-                    max-width: 100%; 
-                    height: auto; 
-                } .banner p {
-                    margin-bottom: 10px;
-                } .buttons {
-                    display: flex;
-                    align-items: flex-start; 
-                    flex-direction: column-wrap;
-                    margin: 100px 0;
-                    gap: 20px;
-                } .content { 
-                    display: flex; 
-                    justify-content: space-around; 
-                    padding: 20px; 
-                    background-color: white;
-                    color: black;
-                } .left, .right { 
-                    width: 45%; 
-                } .right button { 
-                    display: block; 
-                    width: 100%; 
-                    padding: 10px; 
-                    margin: 10px 0; 
-                    font-size: 16px; 
-                    cursor: pointer; 
-                } 
-        </style> 
-    </head> 
-    <body> 
-        <div class="header"> 
-            <h1>Consultas de interés</h1> 
-        </div> 
-        <div class="banner"> 
-            <img src="https://th.bing.com/th/id/OIP.uNP4CriTp85jXlGydg1EEgHaE8?rs=1&pid=ImgDetMain" alt="Estudiantes en un aula"><p> 
-            <div class="banner"> 
-                <div>
-                    <p>Conozca las instituciones y programas académicos de educación superior autorizados por el Ministerio de Educación Nacional</p>
-                    <div class="buttons">
-                        <button>Instituciones</button>
-                        <button>Programas</button>
-                    </div>
-                </div>
-            </div> 
-        </div> 
-        <div class="content"> 
-            <div class="left"> 
-                <h2>Educación</h2> 
-                <p>Sabías que...</p> 
-                <p>Este sistema provee información detallada sobre las instituciones y programas de educación superior en Colombia.</p> 
-            </div> 
-            <div class="right"> 
-                <button>Obtener Información Personalizada</button> 
-                <button>Información Estadística</button> 
-                <button>Estadísticas Destacadas</button> 
-                <button>Sobre nosotros</button> 
-            </div> 
-        </div> 
-    </body>
-    </html>
-    """
+def iniciar_programa():
+    st.set_page_config(page_title="Inicio", page_icon="😎", layout="wide", initial_sidebar_state="collapsed")  # Configuración general de la página
 
-    st.markdown(html_code, unsafe_allow_html=True)
-    st.write('Bienvenido a mi página web interactiva con estilo personalizado.')
+    # Apartado de html de la página principal
+    html_code_var = html_code()
+    st.markdown(html_code_var, unsafe_allow_html=True)
+    st.write('')
+
+    col1, col2, col3 = st.columns(3)
+    with col1 :
+        st.title('SNIES')
+        html_code2_var = html_code2()
+        st.markdown(html_code2_var, unsafe_allow_html=True)
+
+        # Apartado de comentarios para mejorar
+        comentarios = []
+        coments(comentarios)
+
+    with col2:
+        st.title('Importancia del Análisis de Datos')
+        html_code3_var = html_code3()
+        st.markdown(html_code3_var, unsafe_allow_html=True)
+
+    with col3:
+
+        tab1, tab2 = st.tabs(["DATOS DE INTERÉS", "INFORMACIÓN"])  # Apartadi de pestañas para inmersión de la página
+        with tab1:
+            st.header("DATOS DE INTERÉS")
+            st.write("Mantente informado con estos datos que podrían interesarte.")
+
+            # Ejemplo de una lista de noticias
+            noticias = [ {"titulo": "¿Conoces el SNIES?", "descripcion": "Aprende sobre lo que es y lo que hace el SNIES", "link": "https://www.mineducacion.gov.co/sistemasinfo/InformacionInstitucional/211868:Que-es-el-SNIES", "video": "https://www.youtube.com/watch?v=dFmZbTBSMN4"},
+                         {"titulo": "¿No sabes como usar el SNIES?", "descripcion": "Descubre paso a paso como usar el SNIES de manera eficiente", "link": "https://snies.mineducacion.gov.co/portal/EL-SNIES/Como-funciona/", "video": "https://youtu.be/fPWI19h4P38"}
+            ]
+
+            for noticia in noticias:
+                st.subheader(noticia["titulo"])
+                st.write(noticia["descripcion"])
+                st.markdown(f"[Lee más]({noticia['link']})")
+                st.video(noticia["video"])
+
+        with tab2:
+            st.header('Conoce más sobre nosotros')
+            st.write('Github de las personas implicadas en el desarrollo:')
+            link_git = [{"integrante": "Jorge", "gitHub": "https://github.com/jorluos"},
+                       {"integrante": "Alejandro", "gitHub": "https://github.com/Alejost7"},
+                       {"integrante": "Mateo", "gitHub": "https://github.com/Mateo"}]
+
+            for integrante in link_git:
+                st.write(integrante["integrante"], ":")
+                st.write(integrante["gitHub"])
+            st.markdown('#### Agradecimientos')
+            st.video('https://youtu.be/HjhXZufoIeI')
+            st.subheader('Echa un vistazo al Manual Técnico de esta aplicación web')
+            ruta_archivo = 'https://github.com/300CIS017-Object-Oriented-Programming/proyecto-3-pinche_trump/blob/d99d05bc03edc57dad72305e1c900d89be8dfd09/README.md'
+            enlace_html = f"""<a href="{ruta_archivo}" target="_blank" style="font-size: 20px; color: #007BFF; text-decoration: none;">Ver manual Técnico</a>"""
+            st.markdown(enlace_html, unsafe_allow_html=True)
 
 if __name__ == "__main__":
-    iniciarPrograma()
+    iniciar_programa()
 
