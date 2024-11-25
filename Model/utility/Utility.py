@@ -1,7 +1,7 @@
 import streamlit as st
 import os
 
-def htmlCode():
+def html_code():
     html_code = """
     <!DOCTYPE html> 
     <html lang="es"> 
@@ -106,7 +106,7 @@ def htmlCode():
     """
     return html_code
 
-def htmlCode2():
+def html_code2():
     html_code = """<div style="background-color:#494BA8; padding: 20px; border-radius: 5px;">
                             <p style="font-size: 20px;">El Sistema Nacional de Información de la Educación Superior (SNIES) en Colombia recopila datos detallados sobre las 
                             instituciones y programas académicos de educación superior. Este análisis de datos, que abarca aspectos como inscripción, 
@@ -118,7 +118,7 @@ def htmlCode2():
                     </div>"""
     return html_code
 
-def htmlCode3():
+def html_code3():
     html_code = """ <div style="background-color:#494BA8; padding: 20px; border-radius: 5px;">
                             <h3>Mejora del Diseño Curricular</h3><p style="font-size: 20px;">El análisis de las tendencias de 
                                 matrícula y graduación puede identificar áreas que necesitan ajustes curriculares, asegurando 
@@ -130,27 +130,19 @@ def htmlCode3():
                     </div>"""
     return html_code
 
-def chargeBar():
-    buttomCharge = st.button('Button Charge')
-    my_bar = st.progress(0)
-    if buttomCharge:
-        for percentComplete in range(100):
-            time.sleep(0.01)
-        my_bar.progress(percentComplete + 1)
-        st.write('Datos cargados correctamente')
 
-def saveComents(comentarios, persona, coment):
+def save_coments(comentarios, persona, coment):
     comentarios.append({"persona": persona, "comentario": coment})
 
 def coments(comentarios):
     st.markdown("<p style='font-size: 30px;'>Ayudanos a Mejorar!!!<br>Dejanos conocer tu opinión</p>", unsafe_allow_html=True)
     comentario = st.text_input("Escribe tus comentarios")
     persona = st.text_input('Escribe tu Nombre por favor')
-    comentarioButton = st.button('Enviar Comentarios')
-    if comentario and persona and comentarioButton:
+    comentario_button = st.button('Enviar Comentarios')
+    if comentario and persona and comentario_button:
         st.write('Tus comentarios han sido enviados con éxito')
-        saveComents(comentarios, persona, comentario)
-    elif comentarioButton:
+        save_coments(comentarios, persona, comentario)
+    elif comentario_button:
         st.write('No has escrito ningún comentario')
 
 
