@@ -40,7 +40,7 @@ def iniciarPrograma():
 
             # Ejemplo de una lista de noticias
             noticias = [ {"titulo": "¿Conoces el SNIES?", "descripcion": "Aprende sobre lo que es y lo que hace el SNIES", "link": "https://www.mineducacion.gov.co/sistemasinfo/InformacionInstitucional/211868:Que-es-el-SNIES", "video": "https://www.youtube.com/watch?v=dFmZbTBSMN4"},
-                         {"titulo": "¿No sabes como usar el SNIES?", "descripcion": "Descubre paso a paso como usar el SNIES de manera eficiente", "link": "https://snies.mineducacion.gov.co/portal/EL-SNIES/Como-funciona/", "video": "https://www.youtube.com/watch?v=KcgosNzbGq4"}
+                         {"titulo": "¿No sabes como usar el SNIES?", "descripcion": "Descubre paso a paso como usar el SNIES de manera eficiente", "link": "https://snies.mineducacion.gov.co/portal/EL-SNIES/Como-funciona/", "video": "https://youtu.be/fPWI19h4P38"}
             ]
 
             for noticia in noticias:
@@ -59,7 +59,8 @@ def iniciarPrograma():
             for integrante in linkGit:
                 st.write(integrante["integrante"], ":")
                 st.write(integrante["gitHub"])
-
+            st.markdown('#### Agradecimientos')
+            st.video('https://youtu.be/HjhXZufoIeI')
             st.subheader('Echa un vistazo al Manual Técnico de esta aplicación web')
             rutaArchivo = 'https://github.com/300CIS017-Object-Oriented-Programming/proyecto-3-pinche_trump/blob/d99d05bc03edc57dad72305e1c900d89be8dfd09/README.md'
             enlaceHtml = f"""<a href="{rutaArchivo}" target="_blank" style="font-size: 20px; color: #007BFF; text-decoration: none;">Ver manual Técnico</a>"""

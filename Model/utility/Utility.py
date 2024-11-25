@@ -75,7 +75,7 @@ def htmlCode():
             <h1>Sistema Nacional de Información de la Educación Superior (SNIES)</h1> 
         </div> 
         <div class="banner"> 
-            <img src="https://thumbs.dreamstime.com/z/estudiantes-con-docente-estudiando-en-aula-de-diferentes-edades-sentados-juntos-mesas-estudio-grupal-profesor-270894481.jpg" alt="Estudiantes en un aula" class="zoom"</img><p> 
+            <img src="https://www.cna.gov.co/1779/articles-402145_logo.png"  class="zoom" </img><p> 
             <div class="banner"> 
                 <div>
                     <p style="font-size: 25px;">Conozca las instituciones y programas académicos de educación superior autorizados por el Ministerio de Educación Nacional</p>

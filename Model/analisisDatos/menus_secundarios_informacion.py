@@ -56,28 +56,35 @@ def boton_ver_informacion():
         st.session_state["menu"] = "Ver Informacion"
 
 def menu_seleccion_filtro():
-    st.title(f"Menu de :violet[{st.session_state['categoria']}]")
-    boton_volver()
-    try:
-        lector = gl()
-        base_path = "docs/inputs"
-        archivos = lector.obtener_archivos_rango(st.session_state["rango"], st.session_state["categoria"], base_path)
-        datos = cargar_datos(archivos)
-        lector.archivo = datos
-        encabezados = lector.archivo.columns
-        filtro_columna = st.selectbox(
-            "Selecciona uno de los filtros",
-            options=encabezados
-        )
-        st.session_state["filtro_columna"] = filtro_columna
-        st.session_state["dataframe"] = lector.archivo
-        if filtro_columna:
-            opciones_filtros(lector, filtro_columna)
-    except Exception as e:
-        st.error(f"Error al seleccionar el filtro: {e}")
-    boton_ver_informacion()
-    boton_descargar()
-    boton_estadisticas()  
+    col1, col2 = st.columns(2)
+    with col1:
+        st.title(f"Menu de :violet[{st.session_state['categoria']}]")
+        boton_volver()
+        try:
+            lector = gl()
+            base_path = "docs/inputs"
+            archivos = lector.obtener_archivos_rango(st.session_state["rango"], st.session_state["categoria"], base_path)
+            datos = cargar_datos(archivos)
+            lector.archivo = datos
+            encabezados = lector.archivo.columns
+            filtro_columna = st.selectbox(
+                "Selecciona uno de los filtros",
+                options=encabezados
+            )
+            st.session_state["filtro_columna"] = filtro_columna
+            st.session_state["dataframe"] = lector.archivo
+            if filtro_columna:
+                opciones_filtros(lector, filtro_columna)
+        except Exception as e:
+            st.error(f"Error al seleccionar el filtro: {e}")
+        boton_ver_informacion()
+        boton_descargar()
+        boton_estadisticas()
+    with col2:
+        st.markdown(
+            """<img src="https://www.pinclipart.com/picdir/big/529-5296542_analysis-data-clipart.png" width="auto" height="auto">""",
+            unsafe_allow_html=True)
+
 
 def opciones_filtros(lector, filtro):
     columna_seleccionada = lector.obtener_columna(filtro).iloc[:, 0]
