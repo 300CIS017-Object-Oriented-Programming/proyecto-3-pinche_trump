@@ -26,6 +26,10 @@ class gestor_metricas:
         return df_consolidado
 
     def agrupamiento(self, columna1, columna2):
+        if columna1 not in self.archivo.columns:
+            raise ValueError(f"La columna {columna1} no existe en el DataFrame")
+        if columna2 not in self.archivo.columns:
+            raise ValueError(f"La columna {columna2} no existe en el DataFrame")
         agrupado = self.archivo.groupby(columna1)[columna2].sum().reset_index()
         return agrupado
 
