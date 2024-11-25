@@ -1,14 +1,8 @@
 import streamlit as st
-import time
-import streamlit.components.v1 as components
-from Model.src.Controller import Controller
 from Model.utility.Utility import htmlCode, htmlCode2, htmlCode3, coments
 
 
 def iniciarPrograma():
-    if 'controlador' not in st.session_state:
-        st.session_state.controlador = Controller()
-
     st.set_page_config(page_title="Inicio", page_icon="😎", layout="wide", initial_sidebar_state="collapsed")  # Configuración general de la página
 
     # Apartado de html de la página principal
