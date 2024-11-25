@@ -1,11 +1,10 @@
 import plotly.express as px
 import streamlit as st
-import pandas as pd
 from Model.analisisDatos.gestor_metricas import gestor_metricas as gm
 from Model.analisisDatos.gestor_lectura import gestor_lectura as gl
 
 def boton_volver_categoria():
-    if st.button("Volver", key="volver"):
+    if st.button("Volver", key="volver1"):
         st.session_state["menu"] = st.session_state["categoria"]
 
 def obtener_grafico():

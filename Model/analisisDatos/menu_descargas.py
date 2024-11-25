@@ -2,8 +2,12 @@ import streamlit as st
 from Model.analisisDatos.gestor_escritura import gestor_escritura as ge
 from Model.analisisDatos.gestor_lectura import gestor_lectura as gl
 
+def boton_volver_categoria2():
+    if st.button("Volver", key="volver3"):
+        st.session_state["menu"] = st.session_state["categoria"]
+
 def menu_descargas():
-    boton_volver_categoria()
+    boton_volver_categoria2()
     st.title("Descarga tu informacion :blue[PERSONALIZADA] 🤪")
     st.markdown("## Descargas ")
     st.markdown("### Aquí puedes descargar el archivo con la información filtrada del Sistema Nacional de Información de la Educación Superior (SNIES).")
