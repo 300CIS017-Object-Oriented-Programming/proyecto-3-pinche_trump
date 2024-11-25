@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import os
 
-def chargeFile(uploadedfile):
+def charge_file(uploadedfile):
     if not os.path.exists('temp'):
         os.makedirs('temp')
 
@@ -10,7 +10,7 @@ def chargeFile(uploadedfile):
         f.write(uploadedfile.getbuffer())
     return st.success(f'Archivo {uploadedfile.name} guardado temporalmente')
 
-def showFiles():
+def show_files():
     directorio = 'docs/inputs'
     archivosDisponibles = os.listdir(directorio)
     st.markdown("""<div style="background-color:#494BA8; padding: 20px; border-radius: 5px;">
@@ -26,16 +26,16 @@ def showFiles():
         else:
             st.write('No hay archivos disponibles en el directorio indicado')
 
-def chargeNewFile():
+def charge_new_file():
     # Cargar nuevos archivos
     uploadedFiles = st.file_uploader("Cargar nuevo Archivo", type=['csv', "xlsx", "txt"], accept_multiple_files=True)
 
     if uploadedFiles:
         for uploadedFile in uploadedFiles:
-            chargeFile(uploadedFile)
+            charge_file(uploadedFile)
 
-    subidosButton = st.button("Listo")
-    if subidosButton and uploadedFiles:
+    subidos_button = st.button("Listo")
+    if subidos_button and uploadedFiles:
         st.subheader('Archivos Subidos')
         for file in uploadedFiles:
             st.write(file.name)
@@ -49,5 +49,5 @@ def chargeNewFile():
                 st.dataframe(df)
             elif file.type == "text/plain":
                 st.text(file.getvalue().decode("utf-8"))
-    elif subidosButton:
+    elif subidos_button:
         st.write('No has subido ningún archivo')

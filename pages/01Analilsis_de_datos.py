@@ -7,14 +7,14 @@ from Model.analisisDatos.analisis_utility import *
 
 def primer_menu():
     st.set_page_config(page_title="Analizar Datos", layout="wide", page_icon="🤪", initial_sidebar_state="collapsed")
-    showFiles()
+    show_files()
 
     tab1, tab2 = st.tabs(["CARGAR ARCHIVOS NUEVOS", "PROCESAR DATOS"])
     with tab1:
         st.subheader("Gestión de Archivos")
         st.subheader(":green[Carga Nuevos Archivos Para el Análisis]")
         st.markdown("##### Una vez que hayas cargado los archivos que quieras incluir en el análisis pasa a la pestaña de procesar Datos para continuar")
-        chargeNewFile()
+        charge_new_file()
     with tab2:
         col1, col2 = st.columns(2)
         with col1:
