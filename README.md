@@ -2,6 +2,8 @@
 
 ### NUESTRA APP DESPLEGADA https://proyecto-3-pinchetrump-uvteneml9guwk9nbyprjr6.streamlit.app/
 
+### VIDEO DE EXPLICACION DEL PROYECTO https://www.youtube.com/watch?v=T6z7XrISXGE
+
 ## 1. Descripción General
 
 El sistema Nacional de Información de la Educación Superior (SNIES) en Colombia recopila una gran cantidad de datos
