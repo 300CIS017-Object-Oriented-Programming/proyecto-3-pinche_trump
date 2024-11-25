@@ -57,9 +57,104 @@ El sistema procesará los datos para calcular, por cada programa y año los dato
 
 ![Code](./assets/ProcesarData.png)
 
+###Fin manual tecnico
+
+
+
+
+#UML
+```mermaidchart
+classDiagram
+    class gestor_lectura {
+        -archivo
+        +__init__(archivo=None)
+        +obtener_indice_encabezados()
+        +obtener_encabezados(index)
+        +obtener_filas_filtro(columna_filtro, fila_filtro)
+        +obtener_archivos_rango(rango, categoria, base_path)
+        +columna_numerica(filtro_columna)
+        +columna_string(filtro_columna)
+        +obtener_columna(filtro_columna)
+    }
+
+    class gestor_metricas {
+        -archivo
+        +__init__(archivo)
+        +obtener_metricas(filtro)
+        +consolidado()
+        +agrupamiento(columna1, columna2)
+    }
+
+    class gestor_escritura {
+        -archivo
+        +__init__(archivo)
+        +guardar_excel(nombre_archivo)
+        +guardar_json(nombre_archivo)
+        +guardar_csv(nombre_archivo)
+    }
+
+    class Utility {
+        +html_code()
+        +html_code2()
+        +html_code3()
+        +save_coments(comentarios, persona, coment)
+        +coments(comentarios)
+    }
+
+    class analisis_utility {
+        +charge_file(uploadedfile)
+        +show_files()
+        +charge_new_file()
+    }
+
+    class menus_secundarios_informacion {
+        +cargar_datos(archivos)
+        +corregir_tipo(archivo)
+        +obtener_valores_sin_repeticion(columna, archivo)
+        +boton_volver()
+        +boton_descargar()
+        +boton_estadisticas()
+        +boton_ver_informacion()
+        +menu_seleccion_filtro()
+        +opciones_filtros(lector, filtro)
+    }
+
+    class menu_ver_informacion {
+        +boton_volver_categoria()
+        +menu_ver_informacion()
+    }
+
+    class menu_filtros {
+        +opcion_caja_seleccion(filtro)
+        +opcion_entrada_texto()
+    }
+
+    class menu_estadisticas {
+        +boton_volver_categoria()
+        +obtener_grafico()
+        +generar_grafico_barras(archivo, categoria, columna)
+    }
+
+    class menu_descargas {
+        +menu_descargas()
+        +boton_volver_categoria()
+        +boton_descargar(opcion, escritor)
+    }
+Utility --> App
+
+```
+
+
+
+
 
 ## Conlusión
 
 Este manual técnico proporciona una guía detallada para el desarrollo e implementación de una aplicación web interactiva
 utilizando Streamlit para el análisis de datos del SNIES. Se describen los pasos necesarios para la carga, filtrado y
 procesamiento de la información, lo que permite asegurar que el sistema sea fácil de usar y altamente funcional
+
+
+
+
+
