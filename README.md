@@ -7,29 +7,14 @@ sobre lo que son las instituciones de educación superior y los programas acadé
 analizar datos relacionados con la inscripción, admisión y graduación, ayudando en la toma de decisiones en lo que
 concierne al ambito educativo
 
-## 2. Requisitos del Sistema
+## 2. Estructura del Proyecto
 
-### 2.1 Hardware
-
-- CPU: Procesador Intel o AMD de 2 GHZ.
-- RAM: 4 GB o más
-- Almacenamiento: 10 GB de espacio libre
-- Sistema Operativo: windows 10, windos 11,  linux
-
-### 2.2 Software
-
-- Python 3.8 o superior.
-- Librerías de Python: **streamlit, pandas**
-- Entorno de desarrollo (Opcional): Visual Studio Code o PyCharm
-
-## 3. Estructura del Proyecto
-
-### 3.1 Directorios y Archivos
+### 2.1 Directorios y Archivos
 
 - **docs/inputs/**: Carpeta que contiene los archivos **xlsx** para el análisis
 - **Model/**: Carpeta que contiene los archivos base del programa
 
-## 3.2. Configuración del Entorno
+## 3. Configuración del Entorno
 
 1. Clonar el repositorio
 ![Clonamos el Repositorio](./assets/clone.png)
@@ -40,17 +25,16 @@ concierne al ambito educativo
 ## 4. Carga de Información
 
 ### 4.1 Descripción
-
+Utilizamos funciones de las librerias Streamlit y Os para que el usuario pueda cargar sus propios archivos (Siempre y cuando cumplan con e formato previsto)
 ### 4.2 Código de Carga de Arhivos
 
-***INSERTE CÓDIGO AQUÍ***
+***IMAGENCODIGO***
 
 ## 5. Filtrado de Información
 
 ### 5.1 Busqueda por palabras claves
 
-Los usuarios podrán ingresar palabras clave para identificar programas académicos relevantes
-
+Los usuarios podrán elegir una columna y en ella a traves de un menu despegable con funcion de busqueda y autocompleto podran filtrar a traves de palabras clave.
 ### 5.2 Código de filtrado
 
 ***INSERTE CÓDIGO AQUÍ***
@@ -59,7 +43,7 @@ Los usuarios podrán ingresar palabras clave para identificar programas académi
 
 ### 6.1 Descripción
 
-El sistema procesará los datos para calcular, por cada programa y año:
+El sistema procesará los datos para calcular, por cada programa y año los datos provinientes de:
 
 - **Estudiantes inscritos**
 - **Estudiantes graduados**
