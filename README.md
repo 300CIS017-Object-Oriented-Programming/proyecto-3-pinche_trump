@@ -1,5 +1,7 @@
 # Manual Técnico: Sistema de Análisis de Datos del SNIES
 
+# LINK DE LA APP https://proyecto-3-pinchetrump-uvteneml9guwk9nbyprjr6.streamlit.app/
+
 ## 1. Descripción General
 
 El sistema Nacional de Información de la Educación Superior (SNIES) en Colombia recopila una gran cantidad de datos
