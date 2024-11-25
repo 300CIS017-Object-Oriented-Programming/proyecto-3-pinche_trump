@@ -3,7 +3,7 @@ from st_aggrid import AgGrid
 from Model.analisisDatos.gestor_lectura import gestor_lectura as gl
 
 def boton_volver_categoria():
-    if st.button("Volver", key="volver"):
+    if st.button("Volver", key="volver2"):
         st.session_state["menu"] = st.session_state["categoria"]
 
 def menu_ver_informacion():
