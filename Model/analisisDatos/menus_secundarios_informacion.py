@@ -51,6 +51,10 @@ def boton_estadisticas():
     if st.button("Analizar estadisticas"):
         st.session_state["menu"] = "estadisticas"
 
+def boton_ver_informacion():
+    if st.button("Ver Informacion"):
+        st.session_state["menu"] = "Ver Informacion"
+
 def menu_seleccion_filtro():
     st.title(f"Menu de :violet[{st.session_state['categoria']}]")
     boton_volver()
@@ -71,6 +75,7 @@ def menu_seleccion_filtro():
             opciones_filtros(lector, filtro_columna)
     except Exception as e:
         st.error(f"Error al seleccionar el filtro: {e}")
+    boton_ver_informacion()
     boton_descargar()
     boton_estadisticas()  
 

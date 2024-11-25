@@ -26,28 +26,37 @@ def showFiles():
         else:
             st.write('No hay archivos disponibles en el directorio indicado')
 
+
 def chargeNewFile():
     # Cargar nuevos archivos
     uploadedFiles = st.file_uploader("Cargar nuevo Archivo", type=['csv', "xlsx", "txt"], accept_multiple_files=True)
 
-    if uploadedFiles:
-        for uploadedFile in uploadedFiles:
-            chargeFile(uploadedFile)
-
+    st.markdown('##### Da clic en el botón para incluir tus datos en el análisis')
     subidosButton = st.button("Listo")
-    if subidosButton and uploadedFiles:
-        st.subheader('Archivos Subidos')
-        for file in uploadedFiles:
-            st.write(file.name)
 
-            # Leer y mostrar el contenido del archivo dependiendo del tipo
-            if file.type == "text/csv":
-                df = pd.read_csv(file)
-                st.dataframe(df)
-            elif file.type == "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet":
-                df = pd.read_excel(file)
-                st.dataframe(df)
-            elif file.type == "text/plain":
-                st.text(file.getvalue().decode("utf-8"))
-    elif subidosButton:
-        st.write('No has subido ningún archivo')
+    if subidosButton:
+        if uploadedFiles:
+            progress_bar = st.progress(0)  # Inicializar la barra de progreso
+            total_files = len(uploadedFiles)
+
+            st.subheader('Archivos Subidos')
+            for i, file in enumerate(uploadedFiles):
+                # Simula el procesamiento del archivo
+                chargeFile(file)
+
+                # Actualizar la barra de progreso
+                progress = (i + 1) / total_files
+                progress_bar.progress(progress)
+
+                # Mostrar el contenido del archivo dependiendo del tipo
+                st.write(file.name)
+                if file.type == "text/csv":
+                    df = pd.read_csv(file)
+                    st.dataframe(df)
+                elif file.type == "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet":
+                    df = pd.read_excel(file)
+                    st.dataframe(df)
+                elif file.type == "text/plain":
+                    st.text(file.getvalue().decode("utf-8"))
+        else:
+            st.write('No has subido ningún archivo')
