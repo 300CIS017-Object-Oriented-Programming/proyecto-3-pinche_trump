@@ -5,7 +5,8 @@
 El sistema Nacional de Información de la Educación Superior (SNIES) en Colombia recopila una gran cantidad de datos
 sobre lo que son las instituciones de educación superior y los programas académicos que ofrece. Este proyecto permite
 analizar datos relacionados con la inscripción, admisión y graduación, ayudando en la toma de decisiones en lo que
-concierne al ambito educativo
+concierne al ambito educativo en el presebte documento obtendra detalles sobre a implementacion de as caracteristicas
+principales en caso de que desee modificarlo o implementar su propia version
 
 ## 2. Estructura del Proyecto
 
