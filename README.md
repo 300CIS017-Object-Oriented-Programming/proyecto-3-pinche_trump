@@ -30,8 +30,7 @@ concierne al ambito educativo
 Utilizamos funciones de las librerias Streamlit y Os para que el usuario pueda cargar sus propios archivos (Siempre y cuando cumplan con e formato previsto)
 ### 4.2 Código de Carga de Arhivos
 
-***IMAGENCODIGO***
-
+![Code](./assets/CargadoDeArchivos.png)
 ## 5. Filtrado de Información
 
 ### 5.1 Busqueda por palabras claves
@@ -39,7 +38,7 @@ Utilizamos funciones de las librerias Streamlit y Os para que el usuario pueda c
 Los usuarios podrán elegir una columna y en ella a traves de un menu despegable con funcion de busqueda y autocompleto podran filtrar a traves de palabras clave.
 ### 5.2 Código de filtrado
 
-***INSERTE CÓDIGO AQUÍ***
+![Code](./assets/AplicadoFiltros.png)
 
 ## 6 Procesamiento de Datos
 
