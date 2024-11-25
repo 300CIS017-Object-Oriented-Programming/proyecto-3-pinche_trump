@@ -57,13 +57,11 @@ El sistema procesará los datos para calcular, por cada programa y año los dato
 
 ![Code](./assets/ProcesarData.png)
 
-###Fin manual tecnico
+### Fin manual tecnico
 
 
-
-
-#UML
-```mermaidchart
+# UML
+```mermaid
 classDiagram
     class gestor_lectura {
         -archivo
