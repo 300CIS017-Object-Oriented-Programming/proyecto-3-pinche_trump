@@ -1,6 +1,5 @@
 import plotly.express as px
 import streamlit as st
-import pandas as pd
 from Model.analisisDatos.gestor_metricas import gestor_metricas as gm
 from Model.analisisDatos.gestor_lectura import gestor_lectura as gl
 
