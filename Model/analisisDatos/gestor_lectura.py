@@ -9,8 +9,8 @@ class gestor_lectura:
         else:
             self.archivo = pd.DataFrame()
 
-    def obtener_indice_encabezados(self):
-        index = self.archivo[self.archivo.iloc[:, 0] == "CÓDIGO DE LA INSTITUCIÓN"].index
+    def obtener_indice_encabezados(self, columna='CÓDIGO DE LA INSTITUCIÓN'):
+        index = self.archivo[self.archivo.iloc[:, 0] == columna].index
         if not index.empty:
             return index[0]
         else:
@@ -26,7 +26,7 @@ class gestor_lectura:
             return filas_con_filtro
         else:
             raise ValueError(f"No se encontraron filas con el filtro: {fila_filtro}")
-        
+
     def obtener_archivos_rango(self, rango, categoria, base_path):
         i = rango[0]
         lista_archivos = []
@@ -36,13 +36,13 @@ class gestor_lectura:
             i += 1
         st.markdown(lista_archivos)
         return lista_archivos
-    
+
     def columna_numerica(self, filtro_columna):
         return pd.api.types.is_numeric_dtype(filtro_columna)
-    
+
     def columna_string(self, filtro_columna):
         return filtro_columna.dtype == "object"
-    
+
     def obtener_columna(self, filtro_columna):
         if filtro_columna in self.archivo.columns:
             return self.archivo[[filtro_columna]]

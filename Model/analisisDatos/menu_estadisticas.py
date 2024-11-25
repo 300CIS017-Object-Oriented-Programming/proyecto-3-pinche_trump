@@ -26,14 +26,18 @@ def obtener_grafico():
 
     tabla6 = consolidado.agrupamiento("SEMESTRE", str.upper(categoria))
 
-    generar_grafico_barras(tabla, categoria, "INSTITUCIÓN DE EDUCACIÓN SUPERIOR (IES)")
-    generar_grafico_barras(tabla2, categoria, "SEXO")
-    generar_grafico_barras(tabla3, categoria, "AÑO")
-    generar_grafico_barras(tabla4, categoria, "DEPARTAMENTO DE DOMICILIO DE LA IES")
-    generar_grafico_barras(tabla5, categoria, "DESC CINE CAMPO ESPECIFICO")
-    generar_grafico_barras(tabla6, categoria, "SEMESTRE")
-
-    
+    tab1, tab2, tab3 = st.tabs(["VER GRÁFICOS DE BARRAS", "GRÁFICOS CIRCULARES", "GRÁFICOS COMPARATIVOS"])
+    with tab1:
+        generar_grafico_barras(tabla, categoria, "INSTITUCIÓN DE EDUCACIÓN SUPERIOR (IES)")
+        generar_grafico_barras(tabla2, categoria, "SEXO")
+        generar_grafico_barras(tabla3, categoria, "AÑO")
+        generar_grafico_barras(tabla4, categoria, "DEPARTAMENTO DE DOMICILIO DE LA IES")
+        generar_grafico_barras(tabla5, categoria, "DESC CINE CAMPO ESPECIFICO")
+        generar_grafico_barras(tabla6, categoria, "SEMESTRE")
+    with tab2:
+        generar_grafico_circular(tabla2, categoria, "SEXO")
+    with tab3:
+        generar_grafico_comparativos(tabla, categoria, "INSTITUCIÓN DE EDUCACIÓN SUPERIOR (IES)")
 
 
 def generar_grafico_barras(archivo, categoria, columna):
@@ -49,4 +53,25 @@ def generar_grafico_barras(archivo, categoria, columna):
     )
     st.plotly_chart(fig)
 
+def generar_grafico_circular(archivo, categoria, columna):
+    fig = px.pie(
+    archivo,
+    names=columna,
+    values=str.upper(categoria),
+    title=f"{str.upper(categoria)} POR {columna}",
+    )
+    st.plotly_chart(fig)
+
+def generar_grafico_comparativos(archivo, categoria, columna):
+    fig = px.scatter(
+    archivo,
+    x=columna,
+    y=str.upper(categoria),
+    color=columna,
+    title=f"{str.upper(categoria)} POR {columna}",
+    labels={f"NUMERO DE {categoria}": f"Número de {categoria}"},
+    width=1500,  # Ajusta el ancho del gráfico
+    height=800  # Ajusta la altura del gráfico
+    )
+    st.plotly_chart(fig)
 
